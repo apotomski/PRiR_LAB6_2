@@ -26,6 +26,7 @@ int main(int argc, char **argv) {
 		dx = (double)(b - a) / n;
 		i = 1;
 		Twynik += f_x(a + i * dx); 
+		Pwynik += f_x(a + i * dx); 
 		i += 1;
 		
 		MPI_Send(&Twynik, 1, MPI_DOUBLE, p-1, tag, MPI_COMM_WORLD);
